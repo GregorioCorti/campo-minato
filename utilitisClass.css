@@ -1,0 +1,149 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-1 {
+  width: calc((100% / 12) * 1);
+}
+.col-2 {
+  width: calc((100% / 12) * 2);
+}
+.col-3 {
+  width: calc((100% / 12) * 3);
+}
+.col-4 {
+  width: calc((100% / 12) * 4);
+}
+.col-5 {
+  width: calc((100% / 12) * 5);
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: calc((100% / 12) * 7);
+}
+.col-8 {
+  width: calc((100% / 12) * 8);
+}
+.col-9 {
+  width: calc((100% / 12) * 9);
+}
+.col-10 {
+  width: calc((100% / 12) * 10);
+}
+.col-11 {
+  width: calc((100% / 12) * 11);
+}
+.col-12 {
+  width: 100%;
+}
+
+
+@font-face {
+    font-family: 'Seven Segment';
+    font-size:xx-small;
+    src: local('Seven Segment'), url('https://fonts.cdnfonts.com/s/71640/Seven Segment.woff') format('woff');
+}
+
+
+
+/* width */
+
+.wh-100{width:100%;}
+.wh-90{width: 90%;}
+.wh-80{width: 80%;}
+.wh-70{width: 70%;}
+.wh-60{width: 60%;}
+.wh-50{width: 50%;}
+.wh-40{width: 40%;}
+.wh-30{width: 30%;}
+.wh-20{width: 20%;}
+.wh-10{width: 10%;}
+.wh-5{width: 5%;}
+.margin-top{
+  padding: 2rem;
+}
+
+
+
+
+.txt-white{
+    color:white;
+}
+.txt-cream{
+  color: #D3DAD9;
+}
+.font-game{
+   font-family: 'Seven Segment';
+}
+
+.font-big{
+  font-size: 2.5rem;
+}
+
+.txt-neon-fx{
+    text-shadow: #99968b 1px 0 10px;
+}
+
+.user-select-none{
+  user-select: none;
+}
+.font-informal{
+  
+  font-family: "Mogra", system-ui;
+  font-weight: 400;
+  font-style: normal;
+   
+}
+.crimson-text-bold {
+  font-family: "Crimson Text", serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: .7px;
+
+}
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.mg-lf{
+  margin-left: 1.7rem;
+}
+
+.font-medium{
+  font-size: 1.2rem;
+}
+.font-big-medium{
+  font-size: 2.6rem;
+}
+.font-bg-xl{
+  font-size: 2rem;
+}
+.font-md{
+  font-size: 1.7rem;
+}
+
+.wh-gif{
+  width: 45%;
+}
+
+.txt-green{
+  color: rgb(27, 227, 27);
+}
+.txt-red{
+  color: rgb(174, 24, 24);
+  text-shadow: #171514 1px 0 10px;
+}
+.dispayNon{
+  display: none;
+}
+
+.font-xxl{
+  font-size: 5rem;
+}
+.txt-yellow{
+  color: #f1e274;
+}

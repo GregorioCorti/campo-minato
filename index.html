@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo minato </title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="utilitisClass.css">
+    <link rel="stylesheet" href="Responsive.css">
+
+    <!-- icona sito -->
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Crimson+Text:ital,wght@0,700;1,700&family=Mogra&family=Press+Start+2P&family=Raleway:ital,wght@0,100..900;1,100..900&family=Saira+Stencil+One&display=swap"
+        rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+    <div class="start" id="dpNone">
+
+        <h1 class=" txt-neon-fx margin-top font-xxl press-start-2p-regular txt-white">CAMPO MINATO</h1>
+
+
+        <h3 class="txt-neon-fx margin-top font-md press-start-2p-regular txt-cream">arriva a 15 punti per vincere la
+            partita!!</h3>
+        <div class="btn bnt-play txt-white" id="provaa">
+            <img id="ciao" src="img/btn.png" alt="">
+        </div>
+    </div>
+    <header>
+        <nav>
+            <div id="win">
+                <div class="title dispayNon">
+                    <h1 class=" margin-top font-big press-start-2p-regular txt-animated dispayNon font-xxl">YOU WIN!!
+                    </h1>
+                    <img src="img/emoji.gif" alt="">
+                </div>
+                <div class="time">
+                    <p class="txt-white  font-medium press-start-2p-regular dispayNon">Your Time:
+                    <p class="txt-green press-start-2p-regular dispayNon" id="timeWin">0</p>
+                    </p>
+
+                </div>
+                <div class="score-win dispayNon">
+                    <p class="txt-white  font-medium press-start-2p-regular">Your Score:
+                    <p class="txt-yellow press-start-2p-regular" id="scoreWin">0</p>
+                    </p>
+                    <img src="img/surpriceEmoji .png" alt="">
+
+
+                </div>
+                <div class="btn-play-again dispayNon txt-white" id="btn-play-again">
+                    <p>play agains</p>
+                </div>
+
+
+
+            </div>
+
+            <div class="wrapper-nav" id="lose">
+                <div class="left-part wh-50">
+                    <div class="btn-play" id="playAgais">
+                        <p>play agains</p>
+                    </div>
+                    <div class="difficulty txt-white" id="menu">
+                        <P id="txt-diff">difficulty</P>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class=" bi-chevron-down  rotate" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg>
+                        <div class="dropdown" id="wrapper">
+
+                        </div>
+                    </div>
+                    <div class="time">
+                        <p class="txt-white  font-medium press-start-2p-regular dispayNon">Your Time:
+                        <p class="txt-green press-start-2p-regular dispayNon" id="Time">0</p>
+                        </p>
+                    </div>
+                    <div class="score">
+                        <p class="txt-white  font-medium press-start-2p-regular">Your Score:
+                        <p class="txt-green press-start-2p-regular" id="score">0</p>
+                        </p>
+                    </div>
+
+                    <div class="wrapperIcon">
+                        <h1 class=" margin-top font-big press-start-2p-regular txt-red dispayNon font-xxl">GAMEOVER</h1>
+                        <img class="dispayNon" src="img/bomb.gif" alt="">
+
+                    </div>
+                    <div>
+
+                        <div class="icon-option wh-5" id="option-menu">
+                            <img src="img/smilyEmoji.png" width="55px" alt="" class="icon">
+
+                        </div>
+                        <div class="option-menu" id="toggler">
+                            <h2 class=" txt-neon-fx margin-top font-bg-xl press-start-2p-regular txt-white">Modifica il
+                                livello!!</h2>
+                            <div class="border">
+                                <form id="invioDati">
+                                    <input type="number" class="input input-show" name="numBox" id="numBox"
+                                        placeholder="Inserire num box">
+                                    <input type="number" class="input input-show" name="numBomb" id=""
+                                        placeholder="Inserire num bombe">
+                                    <input type="submit" value="Submit" id="submit" class="btn-sub">
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </nav>
+
+    </header>
+
+
+
+
+    <main id="vibe">
+
+
+        <h1 class=" txt-neon-fx margin-top font-big press-start-2p-regular txt-white">CAMPO MINATO</h1>
+        <div class="container">
+            <div class="container-header">
+
+                <div class="form-element container-heade-left">
+                    <div class="glass">
+
+                    </div>
+                    <div class="lcd">
+
+                        <h3 class="user-select-none font-big-medium txt-white font-game txt-neon-fx"> <img
+                                src="New Piskel (2).png" class="wh-img" style="float: left;"> </h3>
+                        <p class="user-select-none font-big-medium txt-white font-game txt-neon-fx mg-lf" id="numBomb">0
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="form-element container-heade-right">
+                    <div class="glass">
+
+                    </div>
+                    <div class="lcd">
+                        <div><img src="New Piskel (3).png" class="wh-gif"></div>
+                        <P class="user-select-none font-big-medium txt-cream font-game txt-neon-fx mg-lf" id="lcdTimer">
+                            0</P>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="container-main" id="containerMain">
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

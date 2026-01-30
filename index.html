@@ -18,7 +18,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Crimson+Text:ital,wght@0,700;1,700&family=Mogra&family=Press+Start+2P&family=Raleway:ital,wght@0,100..900;1,100..900&family=Saira+Stencil+One&display=swap"
         rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
 
 
@@ -39,11 +41,21 @@
     <header>
         <nav>
             <div id="win">
+               
                 <div class="title dispayNon">
                     <h1 class=" margin-top font-big press-start-2p-regular txt-animated dispayNon font-xxl">YOU WIN!!
                     </h1>
                     <img src="img/emoji.gif" alt="">
                 </div>
+
+                 <div class="wrapper-data dispayNon">
+                          <form id="Dati1" class="Dati1">
+                             <input type="text" name="nameuser" class="name" placeholder="name"/>
+                            <input type="number" name="ageuser" class="age" placeholder="age"/>
+                             <input type="submit" id="reload"/>
+                        </form>
+
+                    </div>
                 <div class="time">
                     <p class="txt-white  font-medium press-start-2p-regular dispayNon">Your Time:
                     <p class="txt-green press-start-2p-regular dispayNon" id="timeWin">0</p>
@@ -57,10 +69,14 @@
                     <img src="img/surpriceEmoji .png" alt="">
 
 
+
                 </div>
+            
+
                 <div class="btn-play-again dispayNon txt-white" id="btn-play-again">
                     <p>play agains</p>
                 </div>
+               
 
 
 
@@ -68,9 +84,39 @@
 
             <div class="wrapper-nav" id="lose">
                 <div class="left-part wh-50">
+                    <div class="player">
+                         <img src="New Piskel (1).png" alt="" class="img-top" id="img-top">
+                         <div class="drop" id="dw">
+                           
+
+
+                         </div>
+                    </div>  
+                    <div class="table-wrapper" id="table-wrapper">
+
+                            <div class="top" id="pannello">
+                            <table id="tabella">  
+                            </table>
+                         </div>
+
+                    </div>
+                
+                        
+                     
+                   
                     <div class="btn-play" id="playAgais">
                         <p>play agains</p>
                     </div>
+
+                     <div class="wrapper-data dispayNon">
+                          <form id="Dati1" class="Dati1">
+                             <input type="text" name="nameuser" class="name" placeholder="name"/>
+                            <input type="number" name="ageuser" class="age" placeholder="age"/>
+                             <input type="submit" id="reload"/>
+                        </form>
+
+                    </div>
+
                     <div class="difficulty txt-white" id="menu">
                         <P id="txt-diff">difficulty</P>
 
@@ -82,6 +128,7 @@
                         <div class="dropdown" id="wrapper">
 
                         </div>
+          
                     </div>
                     <div class="time">
                         <p class="txt-white  font-medium press-start-2p-regular dispayNon">Your Time:
@@ -179,6 +226,8 @@
     </main>
 
     <script src="index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
 
 </body>
 

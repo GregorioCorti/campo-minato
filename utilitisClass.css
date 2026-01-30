@@ -40,110 +40,130 @@
   width: 100%;
 }
 
-
 @font-face {
-    font-family: 'Seven Segment';
-    font-size:xx-small;
-    src: local('Seven Segment'), url('https://fonts.cdnfonts.com/s/71640/Seven Segment.woff') format('woff');
+  font-family: "Seven Segment";
+  font-size: xx-small;
+  src: local("Seven Segment"),
+    url("https://fonts.cdnfonts.com/s/71640/Seven Segment.woff") format("woff");
 }
-
-
 
 /* width */
 
-.wh-100{width:100%;}
-.wh-90{width: 90%;}
-.wh-80{width: 80%;}
-.wh-70{width: 70%;}
-.wh-60{width: 60%;}
-.wh-50{width: 50%;}
-.wh-40{width: 40%;}
-.wh-30{width: 30%;}
-.wh-20{width: 20%;}
-.wh-10{width: 10%;}
-.wh-5{width: 5%;}
-.margin-top{
+.wh-100 {
+  width: 100%;
+}
+.wh-90 {
+  width: 90%;
+}
+.wh-80 {
+  width: 80%;
+}
+.wh-70 {
+  width: 70%;
+}
+.wh-60 {
+  width: 60%;
+}
+.wh-50 {
+  width: 50%;
+}
+.wh-40 {
+  width: 40%;
+}
+.wh-30 {
+  width: 30%;
+}
+.wh-20 {
+  width: 20%;
+}
+.wh-10 {
+  width: 10%;
+}
+.wh-5 {
+  width: 5%;
+}
+.margin-top {
   padding: 2rem;
 }
 
-
-
-
-.txt-white{
-    color:white;
+.txt-white {
+  color: white;
 }
-.txt-cream{
-  color: #D3DAD9;
+.txt-cream {
+  color: #d3dad9;
 }
-.font-game{
-   font-family: 'Seven Segment';
+.font-game {
+  font-family: "Seven Segment";
 }
 
-.font-big{
+.font-big {
   font-size: 2.5rem;
 }
 
-.txt-neon-fx{
-    text-shadow: #99968b 1px 0 10px;
+.txt-neon-fx {
+  text-shadow: #99968b 1px 0 10px;
 }
 
-.user-select-none{
+.user-select-none {
   user-select: none;
 }
-.font-informal{
-  
+.font-informal {
   font-family: "Mogra", system-ui;
   font-weight: 400;
   font-style: normal;
-   
 }
 .crimson-text-bold {
   font-family: "Crimson Text", serif;
   font-weight: 700;
   font-style: normal;
-  letter-spacing: .7px;
-
+  letter-spacing: 0.7px;
 }
 .press-start-2p-regular {
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   font-style: normal;
 }
-.mg-lf{
+.mg-lf {
   margin-left: 1.7rem;
 }
 
-.font-medium{
+.font-medium {
   font-size: 1.2rem;
 }
-.font-big-medium{
+.font-big-medium {
   font-size: 2.6rem;
 }
-.font-bg-xl{
+.font-bg-xl {
   font-size: 2rem;
 }
-.font-md{
+.font-md {
   font-size: 1.7rem;
 }
 
-.wh-gif{
+.wh-gif {
   width: 45%;
 }
 
-.txt-green{
+.txt-green {
   color: rgb(27, 227, 27);
 }
-.txt-red{
+.txt-red {
   color: rgb(174, 24, 24);
   text-shadow: #171514 1px 0 10px;
 }
-.dispayNon{
+.dispayNon {
   display: none;
 }
 
-.font-xxl{
+.font-xxl {
   font-size: 5rem;
 }
-.txt-yellow{
+.txt-yellow {
   color: #f1e274;
+}
+
+.fontt {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }

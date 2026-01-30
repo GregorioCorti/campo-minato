@@ -1,5 +1,6 @@
 let currentLevel;
 let functionActiv = 1;
+let Scoree;
 
 const ElementBomb = {
   box: 0,
@@ -35,11 +36,11 @@ let numScore = 0;
 
 // matrice
 const allLevels = [
-  { name: "easy", nBox: 100, bomb: 15, colonne: 10, righe: 10 },
-
-  { name: "medium", nBox: 70, bomb: 17, colonne: 10, righe: 7 },
-  { name: "hard", nBox: 50, bomb: 20, colonne: 10, righe: 5 },
+  { name: "easy", nBox: 100, bomb: 15, colonne: 10, righe: 10, numero: 1 },
+  { name: "medium", nBox: 70, bomb: 17, colonne: 10, righe: 7, numero: 2 },
+  { name: "hard", nBox: 50, bomb: 20, colonne: 10, righe: 5, numero: 3 },
 ];
+let numLevel = 1;
 
 // timer
 let intervallo;
@@ -56,6 +57,8 @@ function timerDspaly() {
       clearInterval(intervallo);
       let losePage = document.getElementById("lose");
       losePage.classList.add("show");
+
+      imgTop.classList.add("dispNon");
       timer.textContent = "CI HAI MESSO TROPPO!!";
       Time.textContent = "CI HAI MESSO TROPPO!!";
     }
@@ -76,6 +79,7 @@ function stopTimer() {
   let TotTime = secondi;
   Time.innerText = TotTime + " sec.";
   timeWin.innerText = TotTime + " sec.";
+  data.time = TotTime;
 }
 
 function lvlEasy() {
@@ -83,6 +87,7 @@ function lvlEasy() {
 
   currentLevel = 0;
   const lvlEasy = allLevels[0];
+  // data.level = allLevels[0].numero;
 
   creaGrigliahtml(lvlEasy.righe, lvlEasy.colonne);
 
@@ -118,7 +123,6 @@ function creaGrigliahtml(rows, cols, verifica, boxInt) {
       wrapper.appendChild(wrapperBox);
       wrapperBox.appendChild(box);
 
-      
       if (verifica > boxInt) {
         verifica--;
 
@@ -165,22 +169,36 @@ function creaGrigliahtml(rows, cols, verifica, boxInt) {
         numScore++;
         score.innerText = numScore;
         scoreWin.innerText = numScore;
+        data.score = numScore - 1;
+
+        console.log(numScore);
+        // data.score = numScore;
         if (numScore == 15) {
           winPage.classList.toggle("show");
+           DWELEMENT.classList.remove("show");
+          pannello.classList.remove("show");
           stopTimer();
         }
 
         if (box.classList.contains("bomb")) {
           score.innerText = numScore - 1;
           losePage.classList.add("show");
+          imgTop.classList.add("dispNon");
+          DWELEMENT.classList.remove("show");
+          pannello.classList.remove("show");
+
+          data.win = false;
           if (losePage.classList.contains("show")) {
             toggle.classList.remove("show");
           }
           stopTimer();
           viber.classList.toggle("show");
         } else {
+          data.win = true;
           viber.classList.remove("show");
         }
+
+        Scoree = numScore;
 
         // impedisce l'apertura della pagina winPage
         if (
@@ -269,6 +287,9 @@ function creoDropDown() {
         allLevels[i].bomb
       );
 
+      numLevel = allLevels[i].numero;
+      console.log(numLevel);
+
       grid(allLevels[i].righe, allLevels[i].colonne, allLevels[i].bomb);
 
       let diff = document.getElementById("txt-diff");
@@ -329,14 +350,15 @@ let btnPlay = document.getElementById("playAgais");
 let btnWin = document.getElementById("btn-play-again");
 
 btnPlay.addEventListener("click", () => {
+  if (data[1] == "") {
+    console.log("ERRORE: inserire i dati prima di procedere:");
+  }
   losePage.classList.remove("show");
   clearInterval(intervallo);
   secondi = 0;
   timer.textContent = secondi;
   isTimerCalled = false;
-
   reloadLevel(); // Ricarica il livello
-  
 });
 
 btnWin.addEventListener("click", () => {
@@ -414,9 +436,7 @@ dati.addEventListener("submit", (e) => {
         newLvl.righe = numR;
         allLevels.push(newLvl);
         console.log(allLevels);
-    
       } else {
- 
         const livelloDaAggiornare = allLevels.find(
           (livello) => livello.name === "custom"
         );
@@ -428,9 +448,8 @@ dati.addEventListener("submit", (e) => {
           livelloDaAggiornare.bomb = numBombInt;
           livelloDaAggiornare.colonne = numC;
           livelloDaAggiornare.righe = numR;
-          console.log("Livello esistente aggiornato:", allLevels); 
-        } 
-        
+          console.log("Livello esistente aggiornato:", allLevels);
+        }
       }
       creoDropDown();
 
@@ -441,10 +460,7 @@ dati.addEventListener("submit", (e) => {
         creaGrigliahtml(numR, numC, verifica, numBoxInt);
         grid(numR, numC, numBombInt);
       }
-      btnPlay.addEventListener("click", ()=>{
-      
-      })
-      
+      btnPlay.addEventListener("click", () => {});
 
       // aggiorna bomb e difficulty
       document.getElementById("numBomb").innerText = numBomb;
@@ -452,14 +468,9 @@ dati.addEventListener("submit", (e) => {
       // Resetta il form
       dati.reset();
       toggle.classList.remove("show");
-    
     }
-  
   }
-
 });
-
-
 //animazione chiusura menu option
 optionMenu.addEventListener("click", () => {
   if (!toggle.classList.contains("show")) {

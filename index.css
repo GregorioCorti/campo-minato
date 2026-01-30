@@ -27,7 +27,7 @@ body {
   text-align: center;
   cursor: pointer;
   position: relative;
-  z-index: 100;
+  z-index: 2;
 }
 .box {
   background-color: #2e2e31;
@@ -35,7 +35,9 @@ body {
   width: 90px;
   height: 80px;
 
-  box-shadow: inset -5px -5px 10px #1f1e1e, inset 5px 5px 10px #413c3c;
+  box-shadow:
+    inset -5px -5px 10px #1f1e1e,
+    inset 5px 5px 10px #413c3c;
   border: 1px solid #2e2e31;
   -webkit-box-shadow: inset 0px -1px 18px 5px #000000;
   box-shadow: inset 0px -1px 18px 5px #000000;
@@ -104,7 +106,9 @@ body {
 }
 
 .box:hover {
-  box-shadow: 0.5px 0.5px 10px #dedede, -0.5px -0.5px 10px #e2e2e2;
+  box-shadow:
+    0.5px 0.5px 10px #dedede,
+    -0.5px -0.5px 10px #e2e2e2;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -253,7 +257,9 @@ main {
 
 @keyframes boxActive {
   0% {
-    box-shadow: 0.5px 0.5px 10px #dedede, -0.5px -0.5px 10px #e2e2e2;
+    box-shadow:
+      0.5px 0.5px 10px #dedede,
+      -0.5px -0.5px 10px #e2e2e2;
     transition: all 0.3s ease-in-out;
   }
   100% {
@@ -287,7 +293,9 @@ div.box.bomb {
 }
 @keyframes boxBomb {
   0% {
-    box-shadow: 0.5px 0.5px 10px #dedede, -0.5px -0.5px 10px #e2e2e2;
+    box-shadow:
+      0.5px 0.5px 10px #dedede,
+      -0.5px -0.5px 10px #e2e2e2;
     transition: all 0.3s ease-in-out;
   }
   100% {
@@ -531,4 +539,132 @@ input::-webkit-inner-spin-button {
 
 .btn-sub:hover {
   background-color: #22c011;
+}
+
+#Dati1 {
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.name,
+.age {
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #252527;
+  color: rgb(243, 240, 240);
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(102, 102, 102);
+}
+.top {
+  background-color: #333232;
+  width: 30%;
+  height: 60vh;
+  position: absolute;
+  top: 20%;
+  right: 35%;
+  display: none;
+  z-index: 1;
+  overflow: auto;
+  -webkit-box-shadow: 1px 1px 22px 1px rgba(161, 161, 161, 0.48);
+  box-shadow: 1px 1px 22px 1px rgba(179, 173, 173, 0.48);
+  border-radius: 0.5rem;
+
+  animation: opa 0.3s ease-in-out forwards;
+}
+
+@keyframes opa {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.img-top {
+  position: relative;
+  z-index: 4;
+}
+.img-top:hover {
+  cursor: pointer;
+}
+.top.show {
+  display: block;
+}
+
+#tabella {
+  width: 90%;
+  margin: auto;
+  color: rgb(235, 235, 235);
+  position: relative;
+}
+.column,
+td,
+tr {
+  border: rgb(163, 163, 163) solid 2px;
+  text-align: center;
+}
+.dispNon {
+  display: none;
+}
+
+.dw_Element {
+  width: 100%;
+  background-color: #333533;
+  padding: 0.5rem;
+  text-align: center;
+  margin: 1px;
+}
+.drop{
+  display: none;
+  flex-direction: column;
+  height: 500px;
+  position: absolute;
+  left: 26%;
+  color: white;
+}
+.drop.show{
+  animation: opacity .3s ease-in-out forwards;
+}
+
+@keyframes opacity{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+#dw.show {
+  display: flex;
+  cursor: pointer;
+}
+.lcdd{
+  width: 100%;
+  height: 190vh;
+  position: absolute;
+  background-color: #1b1b1d;
+  left: 0%;
+  
+}
+
+
+
+/* tabella wrapper */
+
+ .table-wrapper{
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  backdrop-filter: blur(6px);
+  display: none;
+  
+} 
+.table-wrapper.show{
+  display: block;
+
 }
